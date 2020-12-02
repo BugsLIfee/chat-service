@@ -12,7 +12,7 @@ const app = express();
 //   console.log("Private-chat-Server listening on port 8085 new");
 // });
 const server = http.createServer(app);
-const io = socketio(server);
+const io = socketio(server, {path:'/private-socket'});
 
 app.use(cors());
 app.use(router);
